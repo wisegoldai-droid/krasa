@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import { Calendar, MapPin, Users } from 'lucide-react'
+import Link from 'next/link'
+import { Calendar, MapPin, Users, ArrowRight } from 'lucide-react'
 import { getPastEvents } from '@/lib/events'
 
-export const metadata: Metadata = { title: 'Uskutečněné akce' }
+export const metadata: Metadata = { title: 'Uskutecnene akce' }
 
 function formatDate(dateStr: string) {
   return new Date(dateStr).toLocaleDateString('cs-CZ', {
@@ -28,28 +29,30 @@ export default function UskutecnenePage() {
       </div>
 
       <div className="container-main">
-        <div className="space-y-10">
+        <div className="space-y-8">
           {events.map((event, i) => (
-            <article key={event.id} className="grid md:grid-cols-[280px_1fr] gap-8 items-start">
-              {/* Photo */}
+            <Link
+              key={event.id}
+              href={`/uskutecnene/${event.id}`}
+              className="group grid md:grid-cols-[280px_1fr] gap-6 items-start bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100 hover:border-brand-200"
+            >
               {event.coverPhoto ? (
-                <div className="relative h-56 md:h-full min-h-48 rounded-2xl overflow-hidden shadow-md">
+                <div className="relative h-52 md:h-full min-h-52 overflow-hidden">
                   <Image
                     src={event.coverPhoto}
                     alt={event.title}
                     fill
-                    className="object-cover"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                     unoptimized
                   />
                 </div>
               ) : (
-                <div className="h-56 md:h-full min-h-48 rounded-2xl bg-brand-100 flex items-center justify-center text-brand-300">
-                  <span className="text-5xl">🌸</span>
+                <div className="h-52 bg-brand-100 flex items-center justify-center text-5xl">
+                  🌸
                 </div>
               )}
 
-              {/* Content */}
-              <div>
+              <div className="p-6">
                 <div className="flex flex-wrap items-center gap-3 mb-3">
                   <span className="bg-brand-100 text-brand-700 text-xs font-bold px-3 py-1 rounded-full">
                     #{events.length - i}
@@ -64,7 +67,7 @@ export default function UskutecnenePage() {
                   </span>
                 </div>
 
-                <h2 className="font-serif text-2xl font-bold text-gray-900 mb-3 leading-tight">
+                <h2 className="font-serif text-xl font-bold text-gray-900 mb-3 leading-tight group-hover:text-brand-700 transition-colors">
                   {event.title}
                 </h2>
 
@@ -81,9 +84,15 @@ export default function UskutecnenePage() {
                   </div>
                 )}
 
-                <p className="text-gray-600 leading-relaxed">{event.description}</p>
+                <p className="text-gray-500 text-sm leading-relaxed line-clamp-3 mb-4">
+                  {event.description}
+                </p>
+
+                <span className="inline-flex items-center gap-1 text-brand-600 text-sm font-medium group-hover:gap-2 transition-all">
+                  Číst více <ArrowRight className="w-4 h-4" />
+                </span>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </div>

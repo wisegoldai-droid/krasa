@@ -8,78 +8,121 @@ export const events: Event[] = [
     time: '15:30',
     endTime: '17:30',
     venue: 'Divadelní sál Chaberského dvora',
-    venueAddress: 'Praha 8 – Dolní Chabry',
-    description:
-      'Hudebně komponovaný pořad určený dříve narozeným. Moderátor Petr Jančařík a pianista, zpěvák a moderátor Václav Tobrman. Moderuje Mgr. Hana Marie Kunešová, autorka pořadu.',
+    venueAddress: 'Praha 8 - Dolní Chabry',
+    description: 'Hudebně komponovaný pořad určený dříve narozeným. Moderátor Petr Jančařík a pianista, zpěvák a moderátor Václav Tobrman. Moderuje Mgr. Hana Marie Kunešová, autorka pořadu.',
     guests: ['Petr Jančařík', 'Václav Tobrman'],
     status: 'upcoming',
-    coverPhoto:
-      'https://983301db8e.clvaw-cdnwnd.com/7a6561c6d3cad6850fecea38c4ad8aff/200003287-785d77957e/200000055.jpg',
+    coverPhoto: 'https://983301db8e.clvaw-cdnwnd.com/7a6561c6d3cad6850fecea38c4ad8aff/200003287-785d77957e/200000055.jpg',
   },
   {
     id: 'jun-2025',
-    title: 'Míša Dolinová a Filip Sychra rozesmáli sál',
-    date: '2025-06-01',
+    title: 'Herečka Míša Dolinová a šansoniér Filip Sychra rozesmály sál',
+    date: '2025-06-22',
     venue: 'Divadelní sál Chaberského dvora',
-    venueAddress: 'Praha 8 – Dolní Chabry',
-    description:
-      'Úžasní byli nejen hosté z umělecké sféry včetně vynikajícího hudebníka Václava Tobrmana, ale zvláště všichni hosté z řad dříve narozených. Jako vždy nechyběly hezké písničky, vtipné povídání, historky prožité s bardy naší divadelní scény, štědrá tombola a již tradiční lehké občerstvení.',
+    venueAddress: 'Praha 8 - Dolní Chabry',
+    description: 'A tak si tady při každém setkání žijem! Ano, i když se nedostavil dlouho avizovaný host paní Hašková Coolidge, bylo nám všem v nádherné atmosféře skvěle. Úžasní byli nejen hosté z umělecké sféry včetně vynikajícího hudebníka Václava Tobrmana, ale zvláště všichni hosté z řad dříve narozených, někteří i se svým doprovodem. Především tito spoluvytvářeli nejen pohodu setkání, ale ukázali, jak si lze plně vychutnat přítomný okamžik v neskrývané projevené radosti. Jako vždy nechyběly hezké písničky, vtipné povídání, historky prožité s bardy naší divadelní scény, štědrá tombola a již tradiční lehké občerstvení. Všichni přítomní naplnili čtyři hlavní pilíře správného uchopení žití: tancuj, miluj, zpívej a žij! Mé díky patří všem aktérům, vedení úřadu a sponzorům. Obrazové ohlédnutí mluví samo za sebe. Životu vivat! — Hana Marie Kunešová',
     guests: ['Míša Dolinová', 'Filip Sychra', 'Václav Tobrman'],
     status: 'past',
-    coverPhoto:
-      'https://983301db8e.clvaw-cdnwnd.com/7a6561c6d3cad6850fecea38c4ad8aff/200015739-8966b8966d/photo_2026-04-29_15-06-51.jpg',
+    coverPhoto: 'https://983301db8e.clvaw-cdnwnd.com/7a6561c6d3cad6850fecea38c4ad8aff/200015739-8966b8966d/photo_2026-04-29_15-06-51.jpg',
   },
   {
     id: 'nov-2024',
     title: 'Karel Voříšek a Zuzana Stírská roztančili sál',
-    date: '2024-11-01',
+    date: '2024-11-20',
     venue: 'Divadelní sál Chaberského dvora',
-    venueAddress: 'Praha 8 – Dolní Chabry',
-    description:
-      'Tohle komorní sál ještě nezažil! Po přípitku francouzským vínem beaujolaise se začalo rozmotávat klubko 2,5 hodinového programu. Bez nadsázky lze napsat, že kdo přišel, užil si. Kdo zaváhal, pochybil.',
+    venueAddress: 'Praha 8 - Dolní Chabry',
+    description: 'Tohle komorní sál ještě nezažil! Po přípitku francouzským vínem beaujolaise, sponzorský dar, se začalo rozmotávat klubko 2,5 hodinového programu. Bez nadsázky lze napsat, že kdo přišel, užil si. Kdo zaváhal, pochybil. Ano, krása života se projevila v plném rozsahu zkušeností, pohody a radosti ze života. Mluvím o krásných aha momentech, na které se dlouho vzpomíná. Atmosféra se nesla v duchu: jaký koktejl myšlenek si v dané etapě života i chvílích mixujeme, takový život i žijeme.',
     guests: ['Karel Voříšek', 'Zuzana Stírská'],
     status: 'past',
-    coverPhoto:
-      'https://983301db8e.cbaul-cdnwnd.com/7a6561c6d3cad6850fecea38c4ad8aff/200014087-a35f3a35f5/DSC_5931.jpg',
+    coverPhoto: 'https://983301db8e.cbaul-cdnwnd.com/7a6561c6d3cad6850fecea38c4ad8aff/200014087-a35f3a35f5/DSC_5931.jpg',
   },
   {
     id: 'sept-2023',
-    title: 'Naďa Konvalinková a Hanka Křížková',
-    date: '2023-09-01',
+    title: 'Naďa Konvalinková a Hanka Křížková 09/2023',
+    date: '2023-09-26',
     venue: 'Divadelní sál Chaberského dvora',
-    venueAddress: 'Praha 8 – Dolní Chabry',
-    description:
-      'Ti, co přišli, se dobře bavili. Každé naše setkání je vždy krásné, prostoupené láskou a naplněno radostí ze společného bytí.',
+    venueAddress: 'Praha 8 - Dolní Chabry',
+    description: 'Ti, co přišli, se dobře bavili. Ti, co přijít nemohli, přijdou jistě příště. A ti, které náš pořad dosud míjel, k nám také najdou cestu. Proč? Každé naše setkání je vždy krásné, prostoupené láskou a naplněno radostí ze společného bytí. Mluvím o tom, jak je v dnešní době důležité zažít krásné a obohacující vzájemné sdílení, pokud se uskuteční.',
     guests: ['Naďa Konvalinková', 'Hanka Křížková'],
     status: 'past',
-    coverPhoto:
-      'https://983301db8e.cbaul-cdnwnd.com/7a6561c6d3cad6850fecea38c4ad8aff/200012955-8b2e18b2e4/DSC_7190 (1).jpg',
+    coverPhoto: 'https://983301db8e.cbaul-cdnwnd.com/7a6561c6d3cad6850fecea38c4ad8aff/200012955-8b2e18b2e4/DSC_7190 (1).jpg',
   },
   {
     id: 'dec-2022',
-    title: 'Vánoční kavárna s Zdeňkou Volencovou',
-    date: '2022-12-14',
+    title: 'Vánoční kavárna s Zdeňkou Volencovou 12/2022',
+    date: '2022-12-20',
     venue: 'Divadelní sál Chaberského dvora',
-    venueAddress: 'Praha 8 – Dolní Chabry',
-    description:
-      'Adventní nálada, zpěv vánočních koled i písní a čtení autorské lyrické a milostné poezie autorky, herečky Zdeňky Žádníkové-Volencové.',
+    venueAddress: 'Praha 8 - Dolní Chabry',
+    description: 'Znovu a znovu si při každém setkání ověřuji, že mít rád lidi, milovat život a dělat svou práci jak nejlépe umím, je největší umění. Vánoční kavárna se tak vskutku opět vyvedla. Sešel se nás plný komorní sál. Adventní nálada, zpěv vánočních koled i písní a čtení autorské lyrické a milostné poezie autorky, herečky Zdeňky Žádníkové-Volencové. Klavírista, pianista a skladatel Václav Tobrman udával takt celé dvě hodiny.',
     guests: ['Zdeňka Žádníková-Volencová', 'Václav Tobrman'],
     status: 'past',
-    coverPhoto:
-      'https://983301db8e.cbaul-cdnwnd.com/7a6561c6d3cad6850fecea38c4ad8aff/200012406-b9b34b9b37/IMG-20221214-WA0007 (1).jpg',
+    coverPhoto: 'https://983301db8e.cbaul-cdnwnd.com/7a6561c6d3cad6850fecea38c4ad8aff/200012406-b9b34b9b37/IMG-20221214-WA0007 (1).jpg',
+  },
+  {
+    id: 'sept-2022',
+    title: 'Sandra Pogodová 09/2022',
+    date: '2022-09-15',
+    venue: 'Divadelní sál Chaberského dvora',
+    venueAddress: 'Praha 8 - Dolní Chabry',
+    description: 'Pořad, na kterém se nás sešlo neméně než všechna naše předcházející setkání. Pořad, kde jsme se i tentokrát královsky bavili. Pořad, ve kterém zazněla slova vyjadřující naději, nadhled a radost ze života. Dovoluji si vypůjčit slova v knize "Hoď se do pogody", kterou autorka všem zájemcům podepsala.',
+    guests: ['Sandra Pogodová'],
+    status: 'past',
+    coverPhoto: 'https://983301db8e.cbaul-cdnwnd.com/7a6561c6d3cad6850fecea38c4ad8aff/200011621-6094460946/Sandra Pogodova_DSC_3690 (1).jpg',
+  },
+  {
+    id: 'may-2022',
+    title: 'Krásné lidské souznění, šansony, herecké příběhy i cvičení 05/2022',
+    date: '2022-05-31',
+    venue: 'Divadelní sál Chaberského dvora',
+    venueAddress: 'Praha 8 - Dolní Chabry',
+    description: 'Krásné lidské souznění, šansony, herecké příběhy i cvičení. Všechno jsme si prožili, užili a zacvičili s láskou, radostí a humorem. Komponovaný pořad Krása zralého věku letos slaví druhou plnoletost, čili 21 let od svého založení. Je být na co hrdý! Dáša Zázvůrková svým pěveckým projevem a volbou písní dojala i pohladila, Jitka Sedláčková složila hold seniorkám nad 80 i 90 let.',
+    guests: ['Dáša Zázvůrková', 'Jitka Sedláčková', 'Erika Krejčí Havlasová'],
+    status: 'past',
+    coverPhoto: 'https://983301db8e.cbaul-cdnwnd.com/7a6561c6d3cad6850fecea38c4ad8aff/200012854-9c2cd9c2d0/P1060303.jpg',
   },
   {
     id: 'sept-2021',
-    title: 'Monika Absolonová roztančila seniory',
+    title: 'Monika Absolonová s písní Popokatepetl roztančila seniory',
     date: '2021-09-16',
     venue: 'Divadelní sál Chaberského dvora',
-    venueAddress: 'Praha 8 – Dolní Chabry',
-    description:
-      'Legendární píseň z muzikálu Rebelové podtrhla atmosféru dalšího dílu. Sešli jsme se po roce a půl trvající odmlce způsobené koronou. Setkání bylo vskutku nádherné!',
+    venueAddress: 'Praha 8 - Dolní Chabry',
+    description: 'Legendární píseň z muzikálu Rebelové podtrhla krásnou atmosféru dalšího dílu pořadu Krása zralého věku. Sešli jsme se v polovině září po roce a půl trvající odmlce způsobené koronou. Setkání bylo vskutku nádherné! Monika Absolonová a Erika Havlasová se skvěle doplňovaly a po celou dobu držely laťku pořadu hodně vysoko. Přítomní hosté se tak skvěle bavili.',
     guests: ['Monika Absolonová', 'Erika Havlasová'],
     status: 'past',
-    coverPhoto:
-      'https://983301db8e.cbaul-cdnwnd.com/7a6561c6d3cad6850fecea38c4ad8aff/200009761-652d5652d8/Krasa zraleho veku Monika Absolonova 20210916_145755.jpg',
+    coverPhoto: 'https://983301db8e.cbaul-cdnwnd.com/7a6561c6d3cad6850fecea38c4ad8aff/200009761-652d5652d8/Krasa zraleho veku Monika Absolonova 20210916_145755.jpg',
+  },
+  {
+    id: 'dec-2019',
+    title: 'Noblesní setkání 12/2019 s Mistrem Harapesem a Hankou Křížkovou',
+    date: '2019-12-10',
+    venue: 'Divadelní sál Chaberského dvora',
+    venueAddress: 'Praha 8 - Dolní Chabry',
+    description: 'Pramínek vlasů, Život je jen náhoda a Harlekýn v pořadu Krása zralého věku. Světový evergreen Jiřího Suchého v podání Martina Klocperka za doprovodu kytary zahájil adventní setkání. Program společně s autorkou pořadu uvedla starostka Barbora Floriánová, která všem divákům popřála především hodně zdraví v roce 2020.',
+    guests: ['Vlastimil Harapes', 'Hanka Křížková', 'Erika Havlasová', 'Martin Klocperk'],
+    status: 'past',
+    coverPhoto: 'https://983301db8e.cbaul-cdnwnd.com/7a6561c6d3cad6850fecea38c4ad8aff/200008194-849d8849d9/_MG_0278.JPG',
+  },
+  {
+    id: 'oct-2019',
+    title: 'Libuše Švormová a Magda Malá 10/2019',
+    date: '2019-10-10',
+    venue: 'Divadelní sál Chaberského dvora',
+    venueAddress: 'Praha 8 - Dolní Chabry',
+    description: '10. října 2019 nás navštívily herečka Libuše Švormová a muzikálová hvězda Magda Malá, atmosféra byla velice noblesní a příjemná, což sálá i z fotografií. Stálicí pořadu byla opět fyzioterapeutka Erika Havlasová a hudebník Václav Tobrman.',
+    guests: ['Libuše Švormová', 'Magda Malá', 'Václav Tobrman'],
+    status: 'past',
+    coverPhoto: 'https://983301db8e.cbaul-cdnwnd.com/7a6561c6d3cad6850fecea38c4ad8aff/200006256-522ae522b0/_MG_9950.JPG',
+  },
+  {
+    id: 'jun-2019',
+    title: 'Hanka Křížková, Iva Hütnerová a Jaroslav Tuza 06/2019',
+    date: '2019-06-01',
+    venue: 'Divadelní sál Chaberského dvora',
+    venueAddress: 'Praha 8 - Dolní Chabry',
+    description: '"Stářím život nekončí" je heslo pořadu Krása zralého věku. Známá česká herečka a muzikálová zpěvačka Hanka Křížková spolu s herečkou, výtvarnicí a spisovatelkou Ivou Hütnerovou, fyzioterapeutkou Erikou Havlasovou a profesionálním muzikantem, hráčem na heligonku Jaroslavem Tuzou. Chaberští senioři se znovu dokonale bavili.',
+    guests: ['Hanka Křížková', 'Iva Hütnerová', 'Erika Havlasová', 'Jaroslav Tuza'],
+    status: 'past',
+    coverPhoto: 'https://983301db8e.cbaul-cdnwnd.com/7a6561c6d3cad6850fecea38c4ad8aff/200004359-c2e96c2e99/HanaKrizkova.jpg',
   },
 ]
 
@@ -89,4 +132,8 @@ export function getUpcomingEvents(): Event[] {
 
 export function getPastEvents(): Event[] {
   return events.filter((e) => e.status === 'past').sort((a, b) => b.date.localeCompare(a.date))
+}
+
+export function getEventById(id: string): Event | undefined {
+  return events.find((e) => e.id === id)
 }
