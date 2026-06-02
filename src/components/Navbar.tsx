@@ -6,18 +6,18 @@ import { usePathname } from 'next/navigation'
 import { Menu, X, Flower2, ChevronDown } from 'lucide-react'
 
 const mainLinks = [
-  { href: '/', label: 'Uvod' },
+  { href: '/', label: 'Úvod' },
   { href: '/program', label: 'Program 2026' },
   { href: '/galerie', label: 'Fotogalerie' },
-  { href: '/uskutecnene', label: 'Uskutecnene akce' },
+  { href: '/uskutecnene', label: 'Uskutečněné akce' },
   { href: '/kontakty', label: 'Kontakty' },
 ]
 
 const moreLinks = [
-  { href: '/partneri', label: 'Partneri akci' },
+  { href: '/partneri', label: 'Partneři akcí' },
   { href: '/video', label: 'Videa a zdravice Marka Ebena' },
-  { href: '/odkazy', label: 'Napsali o nas' },
-  { href: '/o-nas', label: 'O nas' },
+  { href: '/odkazy', label: 'Napsali o nás' },
+  { href: '/o-nas', label: 'O nás' },
 ]
 
 export default function Navbar() {
@@ -54,7 +54,7 @@ export default function Navbar() {
       <div className="container-main flex items-center justify-between h-16">
         <Link href="/" className="flex items-center gap-2 font-serif font-bold text-brand-800 text-lg shrink-0">
           <Flower2 className="w-6 h-6 text-brand-600" />
-          <span className="hidden sm:inline">Krasa zraleho veku</span>
+          <span className="hidden sm:inline">Krása zralého věku</span>
           <span className="sm:hidden">KZV</span>
         </Link>
 
@@ -82,7 +82,7 @@ export default function Navbar() {
                   : 'text-gray-600 hover:text-brand-700 hover:bg-brand-50'
               }`}
             >
-              Vice
+              Více
               <ChevronDown className={`w-3.5 h-3.5 transition-transform ${moreOpen ? 'rotate-180' : ''}`} />
             </button>
 

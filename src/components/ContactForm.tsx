@@ -8,7 +8,7 @@ import { CheckCircle, AlertCircle, Loader2 } from 'lucide-react'
 // vytvořte nový formulář a VÁŠE_FORM_ID nahraďte
 // skutečným ID (vypadá jako "xpwzgkqb").
 // ---------------------------------------------
-const FORMSPREE_ID = 'VASE_FORM_ID'
+const FORMSPREE_ID = 'xaqkrpeq'
 
 type Status = 'idle' | 'sending' | 'success' | 'error'
 

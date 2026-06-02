@@ -5,20 +5,18 @@ export default function Footer() {
   return (
     <footer className="bg-brand-950 text-white mt-24">
       <div className="container-main py-14 grid md:grid-cols-3 gap-10">
-        {/* Brand */}
         <div>
           <div className="flex items-center gap-2 mb-4">
             <Flower2 className="w-6 h-6 text-brand-400" />
-            <span className="font-serif font-bold text-lg">Krasa zraleho veku</span>
+            <span className="font-serif font-bold text-lg">Krása zralého věku</span>
           </div>
           <p className="text-brand-200 text-sm leading-relaxed">
-            Hudebne komponovany porad urceny drive narozenym. Kazde setkani je krasne,
-            prostoupene laskou a naplneno radosti ze spolecneho byti.
+            Hudebně komponovaný pořad určený dříve narozeným. Každé setkání je krásné,
+            prostoupené láskou a naplněno radostí ze společného bytí.
           </p>
-          <p className="mt-4 text-brand-400 text-xs italic">Starim zivot nekonci</p>
+          <p className="mt-4 text-brand-400 text-xs italic">Stářím život nekončí</p>
         </div>
 
-        {/* Links */}
         <div>
           <h3 className="font-semibold text-brand-300 uppercase tracking-wider text-xs mb-4">
             Navigace
@@ -27,11 +25,11 @@ export default function Footer() {
             {[
               ['/program', 'Program 2026'],
               ['/galerie', 'Fotogalerie'],
-              ['/uskutecnene', 'Uskutecnene akce'],
+              ['/uskutecnene', 'Uskutečněné akce'],
               ['/video', 'Videa a zdravice'],
-              ['/partneri', 'Partneri akci'],
-              ['/odkazy', 'Napsali o nas'],
-              ['/o-nas', 'O nas'],
+              ['/partneri', 'Partneři akcí'],
+              ['/odkazy', 'Napsali o nás'],
+              ['/o-nas', 'O nás'],
               ['/kontakty', 'Kontakty'],
             ].map(([href, label]) => (
               <li key={href}>
@@ -43,7 +41,6 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Contact */}
         <div>
           <h3 className="font-semibold text-brand-300 uppercase tracking-wider text-xs mb-4">
             Kontakt
@@ -65,11 +62,11 @@ export default function Footer() {
                 608 11 88 99
               </a>
             </li>
-            <li className="text-brand-300 text-xs">Mgr. Hana Marie Kunesova</li>
+            <li className="text-brand-300 text-xs">Mgr. Hana Marie Kunešová</li>
           </ul>
           <div className="mt-4 text-xs text-brand-200">
-            <strong className="text-brand-300">Rezervace mist:</strong><br />
-            Jitka Goldsteinova<br />
+            <strong className="text-brand-300">Rezervace míst:</strong><br />
+            Jitka Goldsteinová<br />
             <a href="tel:+420283852858" className="hover:text-white">283 852 858</a>
             {' / '}
             <a href="tel:+420604976653" className="hover:text-white">604 976 653</a>
@@ -78,7 +75,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-brand-900 py-5 text-center text-brand-500 text-xs">
-        &copy; 2009&ndash;{new Date().getFullYear()} Krasa zraleho veku &middot; Agentura KUKR &middot; Vsechna prava vyhrazena
+        &copy; 2009&ndash;{new Date().getFullYear()} Krása zralého věku &middot; Agentura KUKR &middot; Všechna práva vyhrazena
       </div>
     </footer>
   )
