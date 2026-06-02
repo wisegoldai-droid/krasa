@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
 
+=======
+>>>>>>> 19b9d3ffbc72b4a9248bf973fd2a2655d3b4e37d
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
+=======
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
+
+>>>>>>> 19b9d3ffbc72b4a9248bf973fd2a2655d3b4e37d
 :root {
   --font-inter: 'Inter', sans-serif;
   --font-playfair: 'Playfair Display', serif;
@@ -45,10 +53,18 @@
   }
 }
 
+<<<<<<< HEAD
+=======
+/* Smooth image loading */
+>>>>>>> 19b9d3ffbc72b4a9248bf973fd2a2655d3b4e37d
 img {
   transition: opacity 0.3s ease;
 }
 
+<<<<<<< HEAD
+=======
+/* Custom scrollbar */
+>>>>>>> 19b9d3ffbc72b4a9248bf973fd2a2655d3b4e37d
 ::-webkit-scrollbar {
   width: 6px;
 }
