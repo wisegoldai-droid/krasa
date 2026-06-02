@@ -1,0 +1,85 @@
+import Link from 'next/link'
+import { Flower2, Phone, MapPin } from 'lucide-react'
+
+export default function Footer() {
+  return (
+    <footer className="bg-brand-950 text-white mt-24">
+      <div className="container-main py-14 grid md:grid-cols-3 gap-10">
+        {/* Brand */}
+        <div>
+          <div className="flex items-center gap-2 mb-4">
+            <Flower2 className="w-6 h-6 text-brand-400" />
+            <span className="font-serif font-bold text-lg">Krasa zraleho veku</span>
+          </div>
+          <p className="text-brand-200 text-sm leading-relaxed">
+            Hudebne komponovany porad urceny drive narozenym. Kazde setkani je krasne,
+            prostoupene laskou a naplneno radosti ze spolecneho byti.
+          </p>
+          <p className="mt-4 text-brand-400 text-xs italic">Starim zivot nekonci</p>
+        </div>
+
+        {/* Links */}
+        <div>
+          <h3 className="font-semibold text-brand-300 uppercase tracking-wider text-xs mb-4">
+            Navigace
+          </h3>
+          <ul className="space-y-2 text-sm text-brand-200">
+            {[
+              ['/program', 'Program 2026'],
+              ['/galerie', 'Fotogalerie'],
+              ['/uskutecnene', 'Uskutecnene akce'],
+              ['/video', 'Videa a zdravice'],
+              ['/partneri', 'Partneri akci'],
+              ['/odkazy', 'Napsali o nas'],
+              ['/o-nas', 'O nas'],
+              ['/kontakty', 'Kontakty'],
+            ].map(([href, label]) => (
+              <li key={href}>
+                <Link href={href} className="hover:text-white transition-colors">
+                  {label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Contact */}
+        <div>
+          <h3 className="font-semibold text-brand-300 uppercase tracking-wider text-xs mb-4">
+            Kontakt
+          </h3>
+          <ul className="space-y-3 text-sm text-brand-200">
+            <li className="flex items-start gap-2">
+              <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-brand-400" />
+              <span>Perštejnská 286/16, PSČ 184 00<br />Praha 8 - Dolní Chabry</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <Phone className="w-4 h-4 shrink-0 text-brand-400" />
+              <a href="tel:+420602444775" className="hover:text-white transition-colors">
+                602 444 775
+              </a>
+            </li>
+            <li className="flex items-center gap-2">
+              <Phone className="w-4 h-4 shrink-0 text-brand-400" />
+              <a href="tel:+420608118899" className="hover:text-white transition-colors">
+                608 11 88 99
+              </a>
+            </li>
+            <li className="text-brand-300 text-xs">Mgr. Hana Marie Kunesova</li>
+          </ul>
+          <div className="mt-4 text-xs text-brand-200">
+            <strong className="text-brand-300">Rezervace mist:</strong><br />
+            Jitka Goldsteinova<br />
+            <a href="tel:+420283852858" className="hover:text-white">283 852 858</a>
+            {' / '}
+            <a href="tel:+420604976653" className="hover:text-white">604 976 653</a>
+          </div>
+        </div>
+      </div>
+
+      <div className="border-t border-brand-900 py-5 text-center text-brand-500 text-xs">
+        &copy; 2009&ndash;{new Date().getFullYear()} Krasa zraleho veku &middot; Agentura KUKR &middot; Vsechna prava vyhrazena
+      </div>
+    </footer>
+  )
+}
