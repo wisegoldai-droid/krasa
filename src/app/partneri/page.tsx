@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Building2, Users, Wine } from 'lucide-react'
 
 export const metadata: Metadata = { title: 'Partneri akci' }
 
@@ -21,11 +21,23 @@ export default function PartneriPage() {
 
         {/* Hlavni partneri */}
         <section>
-          <h2 className="font-serif text-2xl font-bold text-gray-900 mb-4">Hlavní partneři</h2>
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 space-y-2 text-gray-700">
-            <p>- Rada MČ a pracovníci ÚMČ Praha-Dolní Chabry</p>
-            <p>- Iveta a Josef Kalendovi, Chabrybárna</p>
-            <p>- Merlot d Ór Plzeň</p>
+          <h2 className="font-serif text-2xl font-bold text-gray-900 mb-6">Hlavní partneři</h2>
+          <div className="grid gap-4">
+            {[
+              { icon: Building2, name: 'Rada MČ a pracovníci ÚMČ Praha-Dolní Chabry', desc: 'Municipální podpora akce' },
+              { icon: Users,     name: 'Iveta a Josef Kalendovi', desc: 'Chabrybárna' },
+              { icon: Wine,      name: 'Merlot d Ór Plzeň', desc: 'Vinařský partner' },
+            ].map(({ icon: Icon, name, desc }) => (
+              <div key={name} className="flex items-center gap-4 bg-white rounded-2xl border border-gray-100 shadow-sm px-6 py-4 hover:border-brand-200 hover:shadow-md transition-all">
+                <div className="w-10 h-10 rounded-xl bg-brand-50 flex items-center justify-center shrink-0">
+                  <Icon className="w-5 h-5 text-brand-500" />
+                </div>
+                <div>
+                  <p className="font-semibold text-gray-900 leading-snug">{name}</p>
+                  <p className="text-sm text-gray-400">{desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
