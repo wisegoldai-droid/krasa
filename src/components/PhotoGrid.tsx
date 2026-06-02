@@ -1,10 +1,6 @@
 'use client'
 
-<<<<<<< HEAD
 import { useState, useEffect, useCallback, useRef } from 'react'
-=======
-import { useState } from 'react'
->>>>>>> 19b9d3ffbc72b4a9248bf973fd2a2655d3b4e37d
 import Image from 'next/image'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
 import type { Photo } from '@/lib/types'
@@ -15,7 +11,6 @@ interface Props {
 
 export default function PhotoGrid({ photos }: Props) {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
-<<<<<<< HEAD
   const touchStartX = useRef<number | null>(null)
 
   const close = useCallback(() => setLightboxIndex(null), [])
@@ -57,16 +52,6 @@ export default function PhotoGrid({ photos }: Props) {
       diff > 0 ? next() : prev()
     }
     touchStartX.current = null
-=======
-
-  function prev() {
-    if (lightboxIndex === null) return
-    setLightboxIndex((lightboxIndex - 1 + photos.length) % photos.length)
-  }
-  function next() {
-    if (lightboxIndex === null) return
-    setLightboxIndex((lightboxIndex + 1) % photos.length)
->>>>>>> 19b9d3ffbc72b4a9248bf973fd2a2655d3b4e37d
   }
 
   return (
@@ -91,7 +76,6 @@ export default function PhotoGrid({ photos }: Props) {
         ))}
       </div>
 
-<<<<<<< HEAD
       {lightboxIndex !== null && (
         <div
           className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center select-none"
@@ -118,26 +102,6 @@ export default function PhotoGrid({ photos }: Props) {
           </button>
 
           {/* Fotka */}
-=======
-      {/* Lightbox */}
-      {lightboxIndex !== null && (
-        <div
-          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center"
-          onClick={() => setLightboxIndex(null)}
-        >
-          <button
-            className="absolute top-4 right-4 text-white p-2 hover:bg-white/10 rounded-full transition-colors"
-            onClick={() => setLightboxIndex(null)}
-          >
-            <X className="w-6 h-6" />
-          </button>
-          <button
-            className="absolute left-4 top-1/2 -translate-y-1/2 text-white p-2 hover:bg-white/10 rounded-full transition-colors"
-            onClick={(e) => { e.stopPropagation(); prev() }}
-          >
-            <ChevronLeft className="w-8 h-8" />
-          </button>
->>>>>>> 19b9d3ffbc72b4a9248bf973fd2a2655d3b4e37d
           <div
             className="relative max-w-5xl max-h-[90vh] mx-auto px-16"
             onClick={(e) => e.stopPropagation()}
@@ -150,7 +114,6 @@ export default function PhotoGrid({ photos }: Props) {
               className="max-h-[85vh] w-auto object-contain mx-auto rounded-lg"
               unoptimized
             />
-<<<<<<< HEAD
             <div className="flex items-center justify-center gap-4 mt-3">
               <p className="text-white/60 text-sm">
                 {lightboxIndex + 1} / {photos.length}
@@ -173,18 +136,6 @@ export default function PhotoGrid({ photos }: Props) {
             <span>← → pohyb</span>
             <span>Esc zavrit</span>
           </div>
-=======
-            <p className="text-center text-white/60 text-sm mt-3">
-              {lightboxIndex + 1} / {photos.length} · {photos[lightboxIndex].date}
-            </p>
-          </div>
-          <button
-            className="absolute right-4 top-1/2 -translate-y-1/2 text-white p-2 hover:bg-white/10 rounded-full transition-colors"
-            onClick={(e) => { e.stopPropagation(); next() }}
-          >
-            <ChevronRight className="w-8 h-8" />
-          </button>
->>>>>>> 19b9d3ffbc72b4a9248bf973fd2a2655d3b4e37d
         </div>
       )}
     </>
