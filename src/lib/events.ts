@@ -9,7 +9,7 @@ export const events: Event[] = [
     endTime: '17:30',
     venue: 'Divadelní sál Chaberského dvora',
     venueAddress: 'Praha 8 - Dolní Chabry',
-    description: 'Hudebně komponovaný pořad určený dříve narozeným. Moderátor Petr Jančařík a pianista, zpěvák a moderátor Václav Tobrman. Moderuje Mgr. Hana Marie Kunešová, autorka pořadu.',
+    description: 'Hudebně komponovaný pořad určený dříve narozeným.\n\nHosté: moderátor Petr Jančařík, a pianista, zpěvák a moderátor Václav Tobrman.\n\nModeruje: Mgr. Hana Marie Kunešová, autorka pořadu.\n\nPřijďte se s námi pobavit! Vezměte s sebou dobrou náladu! Těšíme se na Vás!',
     guests: ['Petr Jančařík', 'Václav Tobrman'],
     status: 'upcoming',
     coverPhoto: 'https://983301db8e.clvaw-cdnwnd.com/7a6561c6d3cad6850fecea38c4ad8aff/200003287-785d77957e/200000055.jpg',

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Calendar, MapPin, Clock, Phone, Users, ArrowRight } from 'lucide-react'
+import { Calendar, MapPin, Clock, Phone, Users, ArrowRight, AlertTriangle } from 'lucide-react'
 import { getUpcomingEvents } from '@/lib/events'
 
 export const metadata: Metadata = { title: 'Program 2026' }
@@ -19,13 +19,11 @@ export default function ProgramPage() {
 
   return (
     <div className="pt-24 pb-20">
-      {/* Header */}
       <div className="bg-gradient-to-br from-brand-50 to-purple-50 py-16 mb-12">
         <div className="container-main text-center">
           <h1 className="section-title">Program 2026</h1>
           <p className="section-subtitle max-w-2xl mx-auto">
-            Plán nadcházejících setkání pořadu Krása zralého věku. Počet míst je omezený —
-            rezervujte včas!
+            Plán nadcházejících setkání pořadu Krása zralého věku
           </p>
         </div>
       </div>
@@ -39,10 +37,16 @@ export default function ProgramPage() {
         ) : (
           <div className="space-y-8">
             {events.map((event) => (
-              <div
-                key={event.id}
-                className="card p-8 border-l-4 border-brand-600"
-              >
+              <div key={event.id} className="card p-8 border-l-4 border-brand-600">
+
+                {/* POZOR banner */}
+                <div className="flex items-center gap-3 bg-red-50 border border-red-200 rounded-xl px-5 py-3 mb-6">
+                  <AlertTriangle className="w-5 h-5 text-red-500 shrink-0" />
+                  <p className="text-red-700 font-bold text-sm uppercase tracking-wide">
+                    POZOR! POZOR! Počet míst v sále je omezený!
+                  </p>
+                </div>
+
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
                   <div className="flex-1">
                     <span className="inline-block bg-brand-100 text-brand-700 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-3">
@@ -60,39 +64,55 @@ export default function ProgramPage() {
                       {event.time && (
                         <div className="flex items-center gap-2 text-gray-600 text-sm">
                           <Clock className="w-4 h-4 text-brand-500 shrink-0" />
-                          <span>{event.time} – {event.endTime} hod.</span>
+                          <span className="font-semibold text-brand-700 text-base">
+                            {event.time} – {event.endTime} hod.
+                          </span>
                         </div>
                       )}
                       <div className="flex items-center gap-2 text-gray-600 text-sm">
                         <MapPin className="w-4 h-4 text-brand-500 shrink-0" />
-                        <span>{event.venue}{event.venueAddress && `, ${event.venueAddress}`}</span>
+                        <span className="font-semibold">
+                          {event.venue}{event.venueAddress && `, ${event.venueAddress}`}
+                        </span>
                       </div>
                       {event.guests.length > 0 && (
-                        <div className="flex items-center gap-2 text-gray-600 text-sm">
-                          <Users className="w-4 h-4 text-brand-500 shrink-0" />
-                          <span>{event.guests.join(', ')}</span>
+                        <div className="flex items-start gap-2 text-gray-600 text-sm">
+                          <Users className="w-4 h-4 text-brand-500 shrink-0 mt-0.5" />
+                          <span>
+                            <strong>Hosté:</strong> {event.guests.join(', ')}
+                          </span>
                         </div>
                       )}
                     </div>
 
-                    <p className="text-gray-600 leading-relaxed">{event.description}</p>
+                    <div className="text-gray-600 leading-relaxed space-y-2">
+                      {event.description.split('\n').map((line, i) => (
+                        line.trim() ? <p key={i}>{line}</p> : null
+                      ))}
+                    </div>
+
+                    <p className="mt-4 text-brand-700 font-semibold text-sm">
+                      Moderuje: Mgr. Hana Marie Kunešová, autorka pořadu
+                    </p>
                   </div>
 
-                  {/* Reservation box */}
+                  {/* Rezervační box */}
                   <div className="md:w-72 shrink-0">
                     <div className="bg-brand-50 rounded-2xl p-6 border border-brand-100">
-                      <p className="font-semibold text-brand-800 mb-1 text-sm uppercase tracking-wide">
-                        POZOR! Počet míst je omezený!
+                      <p className="font-bold text-brand-800 mb-1 text-sm uppercase tracking-wide">
+                        Místo rezervujte:
                       </p>
-                      <p className="text-gray-600 text-sm mb-4">Rezervujte místo co nejdříve.</p>
-                      <div className="space-y-2 mb-4">
-                        <div className="flex items-center gap-2 text-sm text-gray-700">
-                          <Phone className="w-4 h-4 text-brand-500" />
+                      <div className="space-y-2 mb-4 mt-3">
+                        <div className="flex items-start gap-2 text-sm text-gray-700">
+                          <Phone className="w-4 h-4 text-brand-500 mt-0.5" />
                           <div>
-                            <p className="font-medium">Jitka Goldsteinová</p>
-                            <a href="tel:+420283852858" className="text-brand-600 hover:underline">283 852 858</a>
-                            <span className="text-gray-400 mx-1">/</span>
-                            <a href="tel:+420604976653" className="text-brand-600 hover:underline">604 976 653</a>
+                            <p className="font-semibold">Jitka Goldsteinová</p>
+                            <a href="tel:+420283852858" className="text-brand-600 hover:underline block">
+                              tel.: 283 852 858
+                            </a>
+                            <a href="tel:+420604976653" className="text-brand-600 hover:underline block">
+                              mobil: 604 976 653
+                            </a>
                           </div>
                         </div>
                       </div>
@@ -107,7 +127,6 @@ export default function ProgramPage() {
           </div>
         )}
 
-        {/* Info banner */}
         <div className="mt-16 bg-gray-50 rounded-2xl p-8 text-center">
           <h3 className="font-serif text-xl font-bold mb-2">Chcete být informováni o nových akcích?</h3>
           <p className="text-gray-500 mb-4">Kontaktujte nás a přidejte se na seznam zájemců.</p>
