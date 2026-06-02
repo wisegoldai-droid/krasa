@@ -34,7 +34,7 @@ export default function PartneriPage() {
           <a href="http://www.ustav-skolstvi.cz" target="_blank" rel="noopener noreferrer"
             className="inline-block hover:opacity-80 transition-opacity">
             <Image
-              src="https://983301db8e.cbaul-cdnwnd.com/7a6561c6d3cad6850fecea38c4ad8aff/200003281-2d7c82e768/Obrázek1.png"
+              src="/images/kvalitni-skola.png"
               alt="Kvalitní škola"
               width={200}
               height={200}
