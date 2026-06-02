@@ -7,12 +7,13 @@ import type { Photo } from '@/lib/types'
 interface Props {
   photos: Photo[]
   years: string[]
+  defaultYear?: string
 }
 
 const PAGE_SIZE = 60
 
-export default function GalerieClient({ photos, years }: Props) {
-  const [selectedYear, setSelectedYear] = useState<string>('all')
+export default function GalerieClient({ photos, years, defaultYear }: Props) {
+  const [selectedYear, setSelectedYear] = useState<string>(defaultYear ?? 'all')
   const [page, setPage] = useState(1)
 
   const filtered = useMemo(() => {
@@ -30,7 +31,6 @@ export default function GalerieClient({ photos, years }: Props) {
 
   return (
     <>
-      {/* Year filter */}
       <div className="flex flex-wrap gap-2 mb-8">
         <button
           onClick={() => selectYear('all')}
@@ -40,7 +40,7 @@ export default function GalerieClient({ photos, years }: Props) {
               : 'bg-gray-100 text-gray-600 hover:bg-brand-100 hover:text-brand-700'
           }`}
         >
-          Vše ({photos.length})
+          Vse ({photos.length})
         </button>
         {years.map((y) => {
           const count = photos.filter((p) => p.date?.startsWith(y)).length
@@ -61,18 +61,15 @@ export default function GalerieClient({ photos, years }: Props) {
       </div>
 
       <p className="text-gray-400 text-sm mb-6">
-        Zobrazeno {visible.length} z {filtered.length} fotografií
+        Zobrazeno {visible.length} z {filtered.length} fotografii
       </p>
 
       <PhotoGrid photos={visible} />
 
       {hasMore && (
         <div className="text-center mt-10">
-          <button
-            onClick={() => setPage(page + 1)}
-            className="btn-outline"
-          >
-            Načíst další ({filtered.length - visible.length} zbývá)
+          <button onClick={() => setPage(page + 1)} className="btn-outline">
+            Nacist dalsi ({filtered.length - visible.length} zbyvá)
           </button>
         </div>
       )}

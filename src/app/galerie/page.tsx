@@ -5,9 +5,13 @@ import type { Photo } from '@/lib/types'
 
 export const metadata: Metadata = { title: 'Fotogalerie' }
 
-export default function GaleriePage() {
+interface Props {
+  searchParams: Promise<{ year?: string }>
+}
+
+export default async function GaleriePage({ searchParams }: Props) {
+  const { year } = await searchParams
   const photos = photosData as Photo[]
-  // Build year list
   const years = [...new Set(photos.map((p) => p.date?.slice(0, 4)).filter(Boolean))].sort(
     (a, b) => Number(b) - Number(a)
   )
@@ -18,12 +22,12 @@ export default function GaleriePage() {
         <div className="container-main text-center">
           <h1 className="section-title">Fotogalerie</h1>
           <p className="section-subtitle">
-            {photos.length} fotografií z akcí 2009–2026
+            {photos.length} fotografii z akci 2009-2026
           </p>
         </div>
       </div>
       <div className="container-main">
-        <GalerieClient photos={photos} years={years as string[]} />
+        <GalerieClient photos={photos} years={years as string[]} defaultYear={year} />
       </div>
     </div>
   )

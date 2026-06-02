@@ -20,4 +20,5 @@ export interface Event {
   coverPhoto?: string
   reportText?: string
   photos?: Photo[]
+  galleryYear?: string
 }

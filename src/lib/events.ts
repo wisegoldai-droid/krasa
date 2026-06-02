@@ -24,6 +24,7 @@ export const events: Event[] = [
     guests: ['Míša Dolinová', 'Filip Sychra', 'Václav Tobrman'],
     status: 'past',
     coverPhoto: 'https://983301db8e.clvaw-cdnwnd.com/7a6561c6d3cad6850fecea38c4ad8aff/200015739-8966b8966d/photo_2026-04-29_15-06-51.jpg',
+    galleryYear: '2026',
   },
   {
     id: 'nov-2024',
@@ -35,6 +36,7 @@ export const events: Event[] = [
     guests: ['Karel Voříšek', 'Zuzana Stírská'],
     status: 'past',
     coverPhoto: 'https://983301db8e.cbaul-cdnwnd.com/7a6561c6d3cad6850fecea38c4ad8aff/200014087-a35f3a35f5/DSC_5931.jpg',
+    galleryYear: '2024',
   },
   {
     id: 'sept-2023',
@@ -46,6 +48,7 @@ export const events: Event[] = [
     guests: ['Naďa Konvalinková', 'Hanka Křížková'],
     status: 'past',
     coverPhoto: 'https://983301db8e.cbaul-cdnwnd.com/7a6561c6d3cad6850fecea38c4ad8aff/200012955-8b2e18b2e4/DSC_7190 (1).jpg',
+    galleryYear: '2023',
   },
   {
     id: 'dec-2022',
@@ -57,6 +60,7 @@ export const events: Event[] = [
     guests: ['Zdeňka Žádníková-Volencová', 'Václav Tobrman'],
     status: 'past',
     coverPhoto: 'https://983301db8e.cbaul-cdnwnd.com/7a6561c6d3cad6850fecea38c4ad8aff/200012406-b9b34b9b37/IMG-20221214-WA0007 (1).jpg',
+    galleryYear: '2022',
   },
   {
     id: 'sept-2022',
@@ -90,6 +94,7 @@ export const events: Event[] = [
     guests: ['Monika Absolonová', 'Erika Havlasová'],
     status: 'past',
     coverPhoto: 'https://983301db8e.cbaul-cdnwnd.com/7a6561c6d3cad6850fecea38c4ad8aff/200009761-652d5652d8/Krasa zraleho veku Monika Absolonova 20210916_145755.jpg',
+    galleryYear: '2021',
   },
   {
     id: 'dec-2019',
@@ -101,6 +106,7 @@ export const events: Event[] = [
     guests: ['Vlastimil Harapes', 'Hanka Křížková', 'Erika Havlasová', 'Martin Klocperk'],
     status: 'past',
     coverPhoto: 'https://983301db8e.cbaul-cdnwnd.com/7a6561c6d3cad6850fecea38c4ad8aff/200008194-849d8849d9/_MG_0278.JPG',
+    galleryYear: '2019',
   },
   {
     id: 'oct-2019',
