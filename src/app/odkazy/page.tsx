@@ -3,24 +3,29 @@ import { ExternalLink, Newspaper } from 'lucide-react'
 
 export const metadata: Metadata = { title: 'Odkazy a ohlasy' }
 
-const pressItems = [
+type PressItem = {
+  source: string
+  title: string
+  date: string
+  url: string
+}
+
+type LinkItem = {
+  label: string
+  url: string
+  desc?: string
+}
+
+const pressItems: PressItem[] = [
   // Přidejte články, recenze a zmínky v tisku
-  // Příklad:
-  // {
-  //   source: 'Pražský deník',
-  //   title: 'Senioři se skvěle bavili na Chaberském dvoře',
-  //   date: '2024-11-15',
-  //   url: 'https://...',
-  // },
 ]
 
-const links = [
+const links: LinkItem[] = [
   {
     label: 'Chaberský dvůr',
     url: 'https://www.chabersky-dvur.cz',
     desc: 'Místo konání pořadu',
   },
-  // Doplňte další relevantní odkazy
 ]
 
 export default function OdkazyPage() {
@@ -34,13 +39,12 @@ export default function OdkazyPage() {
       </div>
 
       <div className="container-main max-w-3xl space-y-16">
-
-        {/* Press */}
         <section>
           <h2 className="font-serif text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
             <Newspaper className="w-6 h-6 text-brand-500" />
             Napsali o nás
           </h2>
+
           {pressItems.length === 0 ? (
             <div className="bg-gray-50 rounded-2xl p-10 text-center text-gray-400">
               <Newspaper className="w-10 h-10 mx-auto mb-3 opacity-30" />
@@ -73,12 +77,12 @@ export default function OdkazyPage() {
           )}
         </section>
 
-        {/* Links */}
         <section>
           <h2 className="font-serif text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
             <ExternalLink className="w-6 h-6 text-brand-500" />
             Užitečné odkazy
           </h2>
+
           <div className="space-y-3">
             {links.map((l) => (
               <a
