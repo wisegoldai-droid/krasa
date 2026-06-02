@@ -53,12 +53,12 @@ export default function HomePage() {
           </div>
 
           <div className="relative hidden md:block">
-            <div className="relative w-full rounded-3xl overflow-hidden shadow-2xl">
+            <div className="relative w-full rounded-3xl overflow-hidden shadow-2xl bg-white">
               <Image
                 src="https://983301db8e.clvaw-cdnwnd.com/7a6561c6d3cad6850fecea38c4ad8aff/200003287-785d77957e/200000055.jpg"
                 alt="Krása zralého věku"
-                width={600}
-                height={450}
+                width={1200}
+                height={900}
                 className="w-full h-auto object-contain"
                 priority
                 unoptimized
