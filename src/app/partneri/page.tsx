@@ -1,31 +1,9 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 
-export const metadata: Metadata = { title: 'Partneři akcí' }
-
-const mainPartners = [
-  { name: 'Rada MČ a pracovníci ÚMČ Praha-Dolní Chabry', note: 'Záštita a podpora pořadu' },
-  { name: 'Iveta a Josef Kalendovi, Chabrybárna', note: 'Partner pořadu' },
-  { name: 'Merlot d Or Plzeň', note: 'Partner pořadu' },
-]
-
-const sponsors = [
-  'VOX',
-  'Tondach',
-  'Vitar',
-  'Rexite',
-  'Pizza',
-  'Onkopharma',
-  'Herb Pharma',
-  'Mattoni',
-  'BEWIT',
-  'Happí Konopí',
-  'Teplice nad Bečvou',
-  'Motor Gear',
-  'T.E.Q.',
-  'APC',
-]
+export const metadata: Metadata = { title: 'Partneri akci' }
 
 export default function PartneriPage() {
   return (
@@ -39,35 +17,65 @@ export default function PartneriPage() {
         </div>
       </div>
 
-      <div className="container-main max-w-3xl">
-        <h2 className="font-serif text-2xl font-bold text-gray-900 mb-6">Hlavní partneři</h2>
-        <div className="space-y-3 mb-14">
-          {mainPartners.map((p) => (
-            <div key={p.name} className="card p-5 flex items-center gap-4">
-              <div className="w-10 h-10 bg-brand-100 rounded-xl flex items-center justify-center shrink-0 text-brand-600 font-bold text-lg">
-                +
-              </div>
-              <div>
-                <p className="font-semibold text-gray-900">{p.name}</p>
-                {p.note && <p className="text-gray-500 text-sm">{p.note}</p>}
-              </div>
-            </div>
-          ))}
-        </div>
+      <div className="container-main max-w-3xl space-y-14">
 
-        <h2 className="font-serif text-2xl font-bold text-gray-900 mb-6">Sponzoři a přispěvatelé</h2>
-        <div className="flex flex-wrap gap-3 mb-14">
-          {sponsors.map((s) => (
-            <span key={s} className="bg-white border border-gray-200 text-gray-700 px-4 py-2 rounded-xl text-sm font-medium shadow-sm">
-              {s}
-            </span>
-          ))}
-        </div>
+        {/* Hlavni partneri */}
+        <section>
+          <h2 className="font-serif text-2xl font-bold text-gray-900 mb-4">Hlavní partneři</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 space-y-2 text-gray-700">
+            <p>- Rada MČ a pracovníci ÚMČ Praha-Dolní Chabry</p>
+            <p>- Iveta a Josef Kalendovi, Chabrybárna</p>
+            <p>- Merlot d Ór Plzeň</p>
+          </div>
+        </section>
 
-        <p className="text-center text-gray-500 text-sm mb-14">
-          Děkujeme všem partnerům za podporu akce Krása zralého věku.
-        </p>
+        {/* Kvalitni skola logo */}
+        <section>
+          <a href="http://www.ustav-skolstvi.cz" target="_blank" rel="noopener noreferrer"
+            className="inline-block hover:opacity-80 transition-opacity">
+            <Image
+              src="https://983301db8e.cbaul-cdnwnd.com/7a6561c6d3cad6850fecea38c4ad8aff/200003281-2d7c82e768/Obrázek1.png"
+              alt="Kvalitní škola"
+              width={200}
+              height={200}
+              unoptimized
+            />
+          </a>
+        </section>
 
+        {/* BEWIT */}
+        <section>
+          <a href="http://www.bewit.love" target="_blank" rel="noopener noreferrer"
+            className="inline-block hover:opacity-80 transition-opacity">
+            <Image
+              src="https://983301db8e.cbaul-cdnwnd.com/7a6561c6d3cad6850fecea38c4ad8aff/200002608-d0043d0fe5/Domecek_2.png"
+              alt="BEWIT"
+              width={220}
+              height={180}
+              unoptimized
+            />
+          </a>
+        </section>
+
+        {/* Vsichni sponzori - grid z originalu */}
+        <section>
+          <h2 className="font-serif text-2xl font-bold text-gray-900 mb-6">Sponzoři a přispěvatelé</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
+            <Image
+              src="https://983301db8e.cbaul-cdnwnd.com/7a6561c6d3cad6850fecea38c4ad8aff/200001226-1fb0420aa4/partneri-11.gif"
+              alt="Sponzoři pořadu Krása zralého věku"
+              width={760}
+              height={500}
+              className="w-full h-auto"
+              unoptimized
+            />
+          </div>
+          <p className="text-center text-gray-500 text-sm mt-4 italic">
+            Děkujeme všem partnerům za podporu akce Krása zralého věku.
+          </p>
+        </section>
+
+        {/* CTA */}
         <div className="bg-gradient-to-br from-brand-800 to-brand-950 text-white rounded-3xl p-10 text-center">
           <h2 className="font-serif text-2xl font-bold mb-3">Chcete se stát partnerem?</h2>
           <p className="text-brand-200 mb-6 leading-relaxed">
